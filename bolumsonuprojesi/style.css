@@ -1,9 +1,11 @@
 /* -mobile: 375px
 -desktop: 1440px */
+/* BASE */
 
 html {
   font-size: 15px;
 }
+
 :root {
   --Soft-Orange: hsl(35, 77%, 62%);
   --Soft-Red: hsl(5, 85%, 63%);
@@ -12,35 +14,97 @@ html {
   --Dark-Grayish-Blue: hsl(236, 13%, 42%);
   --Very-Dark-Blue: hsl(240, 100%, 5%);
 }
-*{
+
+* {
   box-sizing: border-box;
 }
-body{
-  font-family: 'Inter',sans-serif;
+
+body {
+  font-family: 'Inter', sans-serif;
   background-color: var(--Off-White);
   margin: 0;
   padding: 0;
 }
+
+/* BASE END */
+/* HELPER */
+.w-100 {
+  width: 100%;
+}
+
+/* HELPER-END */
+/* NAV */
 nav,
 .container {
   width: 1100px;
   margin: 0 auto;
   justify-content: space-between;
 }
+
 nav {
   margin-top: 80px;
   display: flex;
 }
+
 nav>ul {
   list-style: none;
   display: flex;
   gap: 10px;
 }
-nav > ul > li > a {
+
+nav>ul>li>a {
   text-decoration: none;
   color: var(--Dark-Grayish-Blue);
 
 }
-nav > ul > li > a:hover {
+
+nav>ul>li>a:hover {
   text-decoration: underline 1px;
+}
+
+/* NAV-END */
+
+.container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.container>section {
+  flex: 2;
+}
+
+.container > aside {
+  flex: 1;
+  background: yellow;
+}
+.info {
+  display: flex;
+  /* gap: 30px; */
+}
+
+.info  h1 {
+  font-size: 4rem;
+  margin-top: 20px;
+}
+
+.info > .item {
+  flex: 1;
+}
+
+.item-detail {
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin-top: 20px;
+  /* justify-content: space-around; */
+}
+
+.item-detail > a {
+  margin-top: 40px;
+  padding: 15px 40px;
+  background-color: var(--Soft-Red);
+  color: var(--Off-White);
+  display: inline-block;
+  text-decoration: none;
 }
