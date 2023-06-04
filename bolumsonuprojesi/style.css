@@ -1,6 +1,9 @@
 /* -mobile: 375px
 -desktop: 1440px */
 /* BASE */
+.info > .item {
+  flex: 1;
+}
 
 html {
   font-size: 15px;
@@ -31,7 +34,9 @@ body {
 .w-100 {
   width: 100%;
 }
-
+.bt-none {
+  border-bottom: none !important;
+}
 /* HELPER-END */
 /* NAV */
 nav,
@@ -75,10 +80,6 @@ nav>ul>li>a:hover {
   flex: 2;
 }
 
-.container > aside {
-  flex: 1;
-  background: yellow;
-}
 .info {
   display: flex;
   /* gap: 30px; */
@@ -86,11 +87,7 @@ nav>ul>li>a:hover {
 
 .info  h1 {
   font-size: 4rem;
-  margin-top: 20px;
-}
-
-.info > .item {
-  flex: 1;
+  margin: 20px 0 0;
 }
 
 .item-detail {
@@ -100,11 +97,34 @@ nav>ul>li>a:hover {
   /* justify-content: space-around; */
 }
 
-.item-detail > a {
+.item-detail > a.btn {
   margin-top: 40px;
   padding: 15px 40px;
   background-color: var(--Soft-Red);
   color: var(--Off-White);
   display: inline-block;
   text-decoration: none;
+}
+
+.container > aside {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--Very-Dark-Blue);
+}
+
+.container > aside > h2 {
+  color: var(--Soft-Orange);
+  margin-top: 10px;
+  font-size: 2rem;
+}
+aside > .item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--Dark-Grayish-Blue);
+}
+aside > .item > h3 {
+  color: var(--Off-White);
+}
+
+aside > .item > p {
+  color: var(--Grayish-Blue);
 }
